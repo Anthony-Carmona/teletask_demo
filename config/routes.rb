@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get 'signup', to: 'users#new'
   resources :users, only: [:new, :create]
-  root 'welcome#index'  # You can set this to any controller#action you want
+  root 'users#new'  # You can set this to any controller#action you want
   # Defines the root path route ("/")
   # root "posts#index"
 end

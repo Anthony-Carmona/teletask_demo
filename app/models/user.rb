@@ -2,8 +2,8 @@ class User < ApplicationRecord
     has_secure_password
     validates :name, presence: true
     validates :email, presence: true, uniqueness: true
-    validates :password, presence: true, length: { minimum: 6 } # password validations should be stronger than this
-    validates :phone_number
+    validates :password, presence: true, length: { minimum: 6 }
+    validates :phone_number, presence: true
     after_create :thank_user
 
     private
